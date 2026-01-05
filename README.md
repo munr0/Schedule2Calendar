@@ -1,5 +1,7 @@
 # UBC Class Schedule to Calendar
 
+> This fork is a minimal version of [pouyanfz/Schedule2Calendar](https://github.com/pouyanfz/Schedule2Calendar) that foregoes the Flask server in favour of command-line interactivity. It also features proper logic for handling alternate week course entries.
+
 A command-line tool that allows UBC students to seamlessly convert their class schedules into calendar events with full details, including the class location and the option to set notifications to remind them when to leave for class. This tool is especially helpful for those who find it difficult to navigate the campus, and it automates the process of tracking your classes while also including useful location data for easy navigation.
 
 ## Motivation
