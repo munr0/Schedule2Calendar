@@ -1,9 +1,6 @@
 # UBC Class Schedule to Calendar
 
-Check out the project live here: [**UBC Class Schedule to Calendar**](https://schedule2calendar.pythonanywhere.com)
-
-
-This project allows UBC students to seamlessly convert their class schedules into calendar events with full details, including the class location and the option to set notifications to remind them when to leave for class. This tool is especially helpful for those who find it difficult to navigate the campus, and it automates the process of tracking your classes while also including useful location data for easy navigation.
+A command-line tool that allows UBC students to seamlessly convert their class schedules into calendar events with full details, including the class location and the option to set notifications to remind them when to leave for class. This tool is especially helpful for those who find it difficult to navigate the campus, and it automates the process of tracking your classes while also including useful location data for easy navigation.
 
 <p align="center">
   <img src="/images/Screenshot2.png" alt="Schedule2Calendar" width="800"/>
@@ -27,16 +24,10 @@ Now, you can simply upload your class schedule, and the application will generat
 ## How It Works
 
 1. Download your class schedule from Workday: Navigate to **Academics -> Registration and Courses**, click the ⚙️ in the current class tab, and select **Download to Excel**.
-2. Upload your class schedule in the provided format (an Excel file).
-3. The application reads the file, extracts the necessary information (course names, times, locations), and generates events in a calendar.
-4. The calendar events are saved as a `.ics` file.
-5. You can then import the generated `.ics` file into your calendar application.
-
-
-
-<p align="center">
-  <img src="/images/ScreenShot1.jpeg" alt="Schedule2Calendar" width="500"/>
-</p>  
+2. Place the downloaded Excel file in the project directory.
+3. Run the script - it will automatically detect your schedule file.
+4. The application reads the file, extracts the necessary information (course names, times, locations), and generates a `.ics` calendar file.
+5. Import the generated `.ics` file into your calendar application (Google Calendar, Apple Calendar, etc.).
 
 ### Example of Class Event
 
@@ -52,17 +43,35 @@ If you want to get **time to leave** notifications on iOS you can navigate to **
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ubc-class-schedule-to-calendar.git
+   git clone https://github.com/munr0/schedule2calendar.git
+   cd schedule2calendar
    ```
 
-2. Install the dependencies:
-    ```bash
-    pip install Flask pandas icalendar
-    ```
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
 
-3. Run the Flask application:
-    ```bash
-    python3 Server.py
-    ```
+   # On Windows
+   .\venv\Scripts\Activate.ps1
 
-4. Open your browser and navigate to **http://127.0.0.1:5000/** to access the application.
+   # On macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Place your Excel schedule file (e.g., `View_My_Courses.xlsx`) in the project directory.
+
+2. Run the script:
+   ```bash
+   python Server.py
+   ```
+
+3. The script will automatically find your schedule file and generate a `.ics` file with the same name.
+
+4. Import the generated `.ics` file into your calendar application.
