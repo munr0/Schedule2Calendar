@@ -2,12 +2,6 @@
 
 A command-line tool that allows UBC students to seamlessly convert their class schedules into calendar events with full details, including the class location and the option to set notifications to remind them when to leave for class. This tool is especially helpful for those who find it difficult to navigate the campus, and it automates the process of tracking your classes while also including useful location data for easy navigation.
 
-<p align="center">
-  <img src="/images/Screenshot2.png" alt="Schedule2Calendar" width="800"/>
-</p>
-
-
-
 ## Motivation
 
 As a student at UBC, I found it frustrating when I first arrived, not knowing how to navigate the campus and how far my next class might be. I often had trouble finding classrooms, and this led to unnecessary stress. With this tool, I wanted to create a solution that provides all the necessary information—class times, locations, and reminders—directly in your calendar.
@@ -69,7 +63,7 @@ If you want to get **time to leave** notifications on iOS you can navigate to **
 
 2. Run the script:
    ```bash
-   python Server.py
+   python create_ics.py
    ```
 
 3. The script will automatically find your schedule file and generate a `.ics` file with the same name.
